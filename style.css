@@ -122,6 +122,38 @@ main{
     color: var(--font-secondary);
 }
 
+.crypto-cards{
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    text-align: center;
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 3em;
+}
+
+.crypto-cards p, .crypto-cards th {
+    border-bottom: 1px solid #dddddd33;
+    padding: 15px;
+}
+p:nth-last-child(1) {
+    border-bottom: none;
+  }
+
+.name, .head{
+    border-right: 1px solid #dddddd33;
+}
+
+.crypto-cards p:hover {background-color: var(--main-color);}
+
+.crypto-cards th {
+  margin-top: 3em;
+  padding: 2em;
+  text-align: center;
+  color: white;
+}
+
+
+
 /***** Footer Styling *****/
 footer{
     background-color: var(--secondary-color);
