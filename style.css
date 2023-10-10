@@ -3,8 +3,29 @@
     --secondary-color: #ffefb4;
     --font-primary: white;
     --font-secondary: rgba(255, 255, 255, 0.72);
+    --font-type: 'Poppins', sans-serif;
     --border-radius: 30px;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: var(--main-color);
+    color: var(--font-primary);
+    font-family: var(--font-type);
+}
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
 
 
 
