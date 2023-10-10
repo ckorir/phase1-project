@@ -1,7 +1,6 @@
 :root{
     --main-color: #100D37;
     --secondary-color: #383472;
-
     --font-primary: white;
     --font-secondary: rgba(255, 255, 255, 0.322);
     --font-type: 'Poppins', sans-serif;
@@ -24,8 +23,7 @@ body{
 
 main{
     width: 90%;
-    margin: auto;
-    
+    margin: auto;   
 }
 
 /***** Landing Styling *****/
@@ -34,35 +32,26 @@ main{
     align-items: center;
     width: 100%;
     padding: 0em 3em;
-    
 }
-
 #landing .text-container{
     width: 100%;
     padding: 1em;
     line-height: 2em;
 }
-
 #landing .text-container h1{
     margin-bottom: 1.5em;
     letter-spacing: .1em;
 }
-
 #landing .image-container img{
     height: 32em;
     padding: 2em;
 }
 
-/***** Crupto Container Styling *****/
-#crypto-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   /* background-color: rgb(140, 127, 255); */
-    padding: 2em;
+/***** Search Bar Styling *****/
+#search-bar{
+    padding: 0em 2em;
 }
-
-#crypto-container #search-bar input[type=text]{
+#search-bar input[type=text]{
     width: 40em;
     padding: .8em 3em;
     border: none;
@@ -70,13 +59,10 @@ main{
     background-color: var(--secondary-color);
     color: var(--font-primary);
 }
-
-#crypto-container #search-bar input[type=text]:focus{
+#search-bar input[type=text]:focus{
     outline: none;
 }
-
-
-#crypto-container #search-bar input[type=submit]{
+#search-bar input[type=submit]{
     height: 2.5em;
     margin: 6px;
     width: 120px;
@@ -94,11 +80,9 @@ main{
     -webkit-transition: 500ms;
     transition: 500ms;
     border-radius: 5px;
-    background: linear-gradient(145deg, rgb(104, 92, 206), rgb(81, 20, 179));
-    
-  }
-  
-  #crypto-container #search-bar input[type=submit]:hover {
+    background: linear-gradient(145deg, rgb(104, 92, 206), rgb(81, 20, 179));    
+}
+#search-bar input[type=submit]:hover {
     -webkit-box-shadow: 1px 1px 13px rgb(133, 131, 131),
                       -1px -1px 33px #545b78;
     box-shadow: 1px 1px 13px rgb(57, 54, 92),
@@ -107,8 +91,7 @@ main{
     -webkit-transition: 500ms;
     transition: 500ms;
   }
-  
-  #crypto-container #search-bar input[type=submit]:active {
+#search-bar input[type=submit]:active {
     -webkit-box-shadow: 1px 1px 13px #20232e,
                        -1px -1px 33px #545b78;
     box-shadow: 1px 1px 13px #20232e,
@@ -116,43 +99,64 @@ main{
     color: #d6d6d6;
     -webkit-transition: 100ms;
     transition: 100ms;
-  }
-
+}
 ::placeholder{
     color: var(--font-secondary);
 }
 
-.crypto-cards{
+/***** Crypto Container Styling *****/
+.heading{
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+    padding-bottom: 0em;
+}
+#crypto-container{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 2em;
+    gap: 3em;
+  
+}
+.crypto-cards, .watchlist{
     background-color: var(--secondary-color);
     border-radius: 15px;
     text-align: center;
     width: 50%;
     border-collapse: collapse;
-    margin-top: 3em;
 }
-
-.crypto-cards p, .crypto-cards th {
-    border-bottom: 1px solid #dddddd33;
+.watchlist{
+    width: 70%;
+}
+.crypto-cards{
+    width: 100%;
+}
+.crypto-cards p, .crypto-cards th, .watchlist p, .watchlist th{
     padding: 15px;
+}
+.crypto-cards p, .watchlist p{
+    border-bottom: 1px solid #dddddd1e;
 }
 p:nth-last-child(1) {
     border-bottom: none;
-  }
-
-.name, .head{
+}
+p:first-child{
+    border-top: 1px solid #dddddd33;
+}
+.line{
     border-right: 1px solid #dddddd33;
 }
-
 .crypto-cards p:hover {background-color: var(--main-color);}
-
 .crypto-cards th {
   margin-top: 3em;
   padding: 2em;
   text-align: center;
   color: white;
 }
-
-
+.watching{
+    cursor: pointer;
+}
 
 /***** Footer Styling *****/
 footer{
@@ -162,13 +166,11 @@ footer{
     margin-top: 5em;
     padding: 3em 0em;
 }
-
 footer .contacts{
     display: flex;
     justify-content: space-around;
     margin-top: 1em;
 }
-
 footer hr{
     width: 75%;
     margin: auto;

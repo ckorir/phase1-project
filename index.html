@@ -31,29 +31,40 @@
             <!-- End of Landing Section-->
 
             <!-- Crypto List Section-->
-            <div id="crypto-container">
-                <div class="search-section">
+            <div class="search-section">
                     <form id='search-bar'>
                         <input id='search' type='text' name='search' placeholder="Search Symbol">
                         <input type='submit' name='submit'/>
                     </form>
                 </div>
+
+            <table class="crypto-container">
+
+            </table>
+            <div class="heading">
+                <h4>Crypto Currencies</h4>
+                <h4>My Watchlist</h4>
+            </div>
+                
+            <div id="crypto-container">
                 <table class="crypto-cards">
+                    <tr>
+                        <th class="line">Symbol</th>
+                        <th class="line">Rate</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td class="name line"></td>
+                        <td class="rate line"></td>
+                        <td class="action"></td>
+                    </tr>
+                </table>
+                <table class="watchlist">   
                     <tr>
                         <th class="head">Symbol</th>
                         <th>Rate</th>
                     </tr>
-                    <tr>
-                        <td class="name"></td>
-                        <td class="rate"></td>
-                    </tr>
                 </table>
-                <!-- <table class="watchlist">
-                    <tr>
-                        <th>Symbol</th>
-                        <th>Rate</th>
-                    </tr>
-                </table> -->
             </div>
             <!-- End of Crypto List Section-->
 

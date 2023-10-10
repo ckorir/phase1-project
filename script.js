@@ -5,6 +5,7 @@ const cryptoCard = document.querySelector('.crypto-cards');
 const watchList = document.querySelector('.watchlist');
 const name = document.querySelector('.name');
 const rate = document.querySelector('.rate');
+const action = document.querySelector('.action');
 
 // Assign Endpoints and access Key
 endpoint = 'live';
@@ -22,15 +23,24 @@ function get_currencies() {
         for (const currency in rates) {
            // console.log(`${currency}: ${rates[currency]}`);
             const symbolName = document.createElement('p');
-            symbolName.textContent = currency;
             const symbolRate = document.createElement('p');
+            const favorite = document.createElement('p');
+            favorite.className = 'watching';
+            const watch = document.createElement('a');
+            watch.className = 'watching';
+            watch.textContent = 'Watch';
+            symbolName.textContent = currency;
             symbolRate.textContent = rates[currency];
-            //const symbolElement = document.createElement('div'); // Create a new HTML element
-            //symbolElement.textContent = symbolName + symbolRate; // Set the text content of the element to the currency symbol.
-
+            //symbolRate.appendChild(watch);
+            // Appending data to DOM
             name.appendChild(symbolName);
             rate.appendChild(symbolRate);
-            //cryptoCard.appendChild(symbolElement);
+            favorite.appendChild(watch);
+            action.appendChild(favorite);
+
+            watch.addEventListener('click', () => {
+                console.log(currency);
+            });
         }
 
         //cryptoCard.appendChild(symbolElement);
