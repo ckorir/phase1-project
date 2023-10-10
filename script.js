@@ -1,6 +1,10 @@
+document.addEventListener('DOMContentLoaded', function () {
+
 // Get Html Elements
-const cryptoCard = document.getElementsByClassName('crypto-card');
-const watchList = document.getElementsByClassName('watchlist');
+const cryptoCard = document.querySelector('.crypto-cards');
+const watchList = document.querySelector('.watchlist');
+const name = document.querySelector('.name');
+const rate = document.querySelector('.rate');
 
 // Assign Endpoints and access Key
 endpoint = 'live';
@@ -16,9 +20,20 @@ function get_currencies() {
         const rates = data.rates;
         
         for (const currency in rates) {
-            console.log(`${currency}: ${rates[currency]}`);
-            const symbolName = currency;
+           // console.log(`${currency}: ${rates[currency]}`);
+            const symbolName = document.createElement('p');
+            symbolName.textContent = currency;
+            const symbolRate = document.createElement('p');
+            symbolRate.textContent = rates[currency];
+            //const symbolElement = document.createElement('div'); // Create a new HTML element
+            //symbolElement.textContent = symbolName + symbolRate; // Set the text content of the element to the currency symbol.
+
+            name.appendChild(symbolName);
+            rate.appendChild(symbolRate);
+            //cryptoCard.appendChild(symbolElement);
         }
+
+        //cryptoCard.appendChild(symbolElement);
     })
     .catch(error => {
         console.error('Error:', error);
@@ -26,3 +41,6 @@ function get_currencies() {
 }
 
 get_currencies();
+
+});
+
