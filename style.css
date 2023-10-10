@@ -63,8 +63,8 @@ main{
 }
 
 #crypto-container #search-bar input[type=text]{
-    width: 30em;
-    padding: .6em 3em;
+    width: 40em;
+    padding: .8em 3em;
     border: none;
     border-radius: var(--border-radius);
     background-color: var(--secondary-color);
@@ -117,8 +117,6 @@ main{
     -webkit-transition: 100ms;
     transition: 100ms;
   }
-
-
 
 ::placeholder{
     color: var(--font-secondary);
