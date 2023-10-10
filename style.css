@@ -1,6 +1,7 @@
 :root{
     --main-color: #100D37;
-    --secondary-color: #ffefb4;
+    --secondary-color: #383472;
+
     --font-primary: white;
     --font-secondary: rgba(255, 255, 255, 0.72);
     --font-type: 'Poppins', sans-serif;
@@ -48,6 +49,36 @@ main{
 #landing .image-container img{
     height: 32em;
     padding: 2em;
+}
+
+#crypto-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(140, 127, 255);
+    padding: 2em;
+}
+
+footer{
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: white;
+    margin-top: 5em;
+    padding: 3em 0em;
+}
+
+footer .contacts{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+
+footer hr{
+    width: 75%;
+    margin: auto;
+    color: aqua;
+    border: 0.0005px solid#ffffff;
+    margin: 2em auto;
 }
 
 
