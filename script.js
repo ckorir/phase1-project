@@ -14,13 +14,17 @@ access_key = 'a0e178e366e4e0d663a7803cc0d0b628';
 url = 'http://api.coinlayer.com/api/';
 
 // Fuction for fetching currency data
-function get_currencies() {
+function get_currencies(topCount) {
     fetch(url + endpoint + '?access_key=' + access_key)
     .then(response => response.json())
     .then(data => {
         const rates = data.rates;
+        // Sort the currencies by rate in descending order
+        const sortedCurrencies = Object.keys(rates).sort((a, b) => rates[b] - rates[a]);
         
-        for (const currency in rates) {
+        // Loop through the currencies
+        for (let i = 0; i < topCount; i++) {
+            const currency = sortedCurrencies[i];
            // console.log(`${currency}: ${rates[currency]}`);
             const symbolName = document.createElement('p');
             const symbolRate = document.createElement('p');
@@ -31,7 +35,7 @@ function get_currencies() {
             watch.textContent = 'Watch';
             symbolName.textContent = currency;
             symbolRate.textContent = rates[currency];
-            //symbolRate.appendChild(watch);
+            
             // Appending data to DOM
             name.appendChild(symbolName);
             rate.appendChild(symbolRate);
@@ -42,15 +46,13 @@ function get_currencies() {
                 console.log(currency);
             });
         }
-
-        //cryptoCard.appendChild(symbolElement);
     })
     .catch(error => {
         console.error('Error:', error);
     });
 }
-
-get_currencies();
+// Display a certain number of currencies
+get_currencies(10);
 
 });
 
