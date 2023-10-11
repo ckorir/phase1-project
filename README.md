@@ -26,6 +26,11 @@ Crypto Watch uses the following to function:
 
 These limitations are a result of the free API package, which restricts available endpoints and enforces a low request rate limit. Upgrading to a more comprehensive package is the recommended solution to enhance Crypto Watch's functionality and user experience.
 
+## Screenshots
+![](img/SC1.png)
+![](img/SC2.png)
+![](img/SC3.png)
+
 
 ## License
 
