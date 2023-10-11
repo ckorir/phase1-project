@@ -166,7 +166,7 @@ img[alt="Crypto-Coin"]{
     gap: 3em;
   
 }
-.crypto-cards, .watchlist, .searchlist p{
+.crypto-cards, .watchlist, .searchlist{
     background-color: var(--secondary-color);
     border-radius: 15px;
     text-align: center;
