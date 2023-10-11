@@ -16,10 +16,26 @@
 }
 
 body{
-    background-color: var(--main-color);
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 2%, rgba(54,0,147,1) 44%, rgba(111,8,201,1) 100%);
     color: var(--font-primary);
     font-family: var(--font-type);
 }
+
+/* Customize the scrollbar's width and height */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #6243cf;
+    
+    border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+  }
 
 main{
     width: 90%;
@@ -46,6 +62,8 @@ main{
     height: 32em;
     padding: 2em;
 }
+
+
 
 /***** Search Bar Styling *****/
 #search-bar{
@@ -100,6 +118,14 @@ main{
     -webkit-transition: 100ms;
     transition: 100ms;
 }
+.searchlist{
+    margin-top: 2em;
+    margin-left: 2em;
+    padding: 2em;
+}
+.searchlist td, th{
+    padding: 1em;
+}
 ::placeholder{
     color: var(--font-secondary);
 }
@@ -119,7 +145,7 @@ main{
     gap: 3em;
   
 }
-.crypto-cards, .watchlist{
+.crypto-cards, .watchlist, .searchlist{
     background-color: var(--secondary-color);
     border-radius: 15px;
     text-align: center;
