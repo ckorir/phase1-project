@@ -57,13 +57,33 @@ main{
 #landing .text-container h1{
     margin-bottom: 1.5em;
     letter-spacing: .1em;
+    
 }
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
 #landing .image-container img{
     height: 32em;
     padding: 2em;
 }
 
-
+img[alt="Crypto-Coin"]{
+    animation: bounce 2s infinite;
+    animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1); /* Use cubic-bezier for a smoother bounce */
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
 
 /***** Search Bar Styling *****/
 #search-bar{
@@ -99,6 +119,7 @@ main{
     transition: 500ms;
     border-radius: 5px;
     background: linear-gradient(145deg, rgb(104, 92, 206), rgb(81, 20, 179));    
+    animation: pulse 1s infinite;
 }
 #search-bar input[type=submit]:hover {
     -webkit-box-shadow: 1px 1px 13px rgb(133, 131, 131),
@@ -145,7 +166,7 @@ main{
     gap: 3em;
   
 }
-.crypto-cards, .watchlist, .searchlist{
+.crypto-cards, .watchlist, .searchlist p{
     background-color: var(--secondary-color);
     border-radius: 15px;
     text-align: center;
@@ -173,7 +194,12 @@ p:first-child{
 .line{
     border-right: 1px solid #dddddd33;
 }
-.crypto-cards p:hover {background-color: var(--main-color);}
+.crypto-cards p{
+    transition: background-color 0.4s ease-in-out;
+}
+.crypto-cards p:hover {
+    background-color: var(--main-color);
+}
 .crypto-cards th {
   margin-top: 3em;
   padding: 2em;
