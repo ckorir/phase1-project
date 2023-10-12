@@ -188,9 +188,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to add a symbol with a watch event
     function addSymbolWithWatch(currency){
         // Create Symbol Data
-        const symbolName = document.createElement('p');
-        const symbolRate = document.createElement('p');
-        const symbolID = currency.id;
+        let symbolName = document.createElement('p');
+        let symbolRate = document.createElement('p');
+        let symbolID = currency.id;
         symbolName.textContent = currency.symbol;
         symbolRate.textContent = currency.marketCap;
 
@@ -220,13 +220,20 @@ document.addEventListener('DOMContentLoaded', function () {
         favorite.addEventListener('click', () => {
             
             // Move the symbol and market cap to the watchlist
-            watchName.appendChild(symbolName);
-            watchRate.appendChild(symbolRate);
+            // watchName.appendChild(symbolName);
+            // watchRate.appendChild(symbolRate);
+            addList();
             favorite.remove();            
-            watchAction.appendChild(remove);
+            // watchAction.appendChild(remove);
             //console.log(`${currency}: ${marketCap}`);
 
-        });      
+        });
+        
+        function addList(){
+            watchName.append(symbolName);
+            watchRate.append(symbolRate);
+            watchAction.append(remove);
+        }
         
         // Add a click event to the unwatch
         remove.addEventListener('click', (e) => {
@@ -261,14 +268,76 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Add a eventlistener to the form
         form.addEventListener('submit', (e) => {
-
             e.preventDefault();
-            const searchValue = e.target.search.value;
+            const searchValue = e.target.search.value.toLowerCase();
+            //
+            // Call the searchCurrency function
             searchCurrency(searchValue);
-            //console.log(input)
+            //form.reset();
 
-            form.reset();
+
+
+            
         });
+
+            
+            function searchCurrency(searchValue){
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const foundCurrency = data.find(item => item.name.toLowerCase() === searchValue);
+                    if (foundCurrency) {
+                        // Display the searched currency
+                       searchResultHTML = `
+                        <table class="searchlist">
+                            <tr>
+                                <th class="head">Symbol</th>
+                                <th>Market Cap</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td class="line" >${foundCurrency.symbol}</td>
+                                <td class="line" >${foundCurrency.marketCap}</td>
+                                <td class ="add">Watch</td>
+                            </tr> 
+                        </table>
+                        `;
+
+                        searchResults.innerHTML = searchResultHTML;
+                        function addToWatch(){
+
+                            // Create Symbol Data
+                            const add = document.querySelector('.add');
+                            add.addEventListener('click', () =>{
+                                symbolName.textContent = foundCurrency.symbol;
+                                symbolRate.textContent = foundCurrency.marketCap;
+                                addList();
+                                //favorite.remove();            
+                                //watchAction.appendChild(remove);
+                            });
+                            
+                        }
+                        addToWatch();
+                    } else {
+                        searchResults.innerHTML = "Currency not found.";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+                //form.reset();
+            }
+            
+        
+
+        // function searchCurrency(search) {
+        //     fetch(url,)
+        // }
     }
 
 })
