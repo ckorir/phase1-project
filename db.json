@@ -1,0 +1,221 @@
+{
+    "total_market_cap": [
+      {
+        "id": 1,
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "marketCap": 40463777.511872455
+      },
+      {
+        "id": 2,
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "marketCap": 700823019.2451861
+      },
+      {
+        "id": 3,
+        "name": "Litecoin",
+        "symbol": "LTC",
+        "marketCap": 17793724877.53115
+      },
+      {
+        "id": 4,
+        "name": "Bitcoin Cash",
+        "symbol": "BCH",
+        "marketCap": 5092996050.322832
+      },
+      {
+        "id": 5,
+        "name": "Binance Coin",
+        "symbol": "BNB",
+        "marketCap": 5305675763.717441
+      },
+      {
+        "id": 6,
+        "name": "EOS",
+        "symbol": "EOS",
+        "marketCap": 2038655526222.4583
+      },
+      {
+        "id": 7,
+        "name": "XRP",
+        "symbol": "XRP",
+        "marketCap": 2262620765303.6714
+      },
+      {
+        "id": 8,
+        "name": "Stellar",
+        "symbol": "XLM",
+        "marketCap": 10688979561480.652
+      },
+      {
+        "id": 9,
+        "name": "Chainlink",
+        "symbol": "LINK",
+        "marketCap": 149560642282.7768
+      },
+      {
+        "id": 10,
+        "name": "Polkadot",
+        "symbol": "DOT",
+        "marketCap": 296163509313.7754
+      },
+      {
+        "id": 11,
+        "name": "Yearn Finance",
+        "symbol": "YFI",
+        "marketCap": 212932019.18907285
+      },
+      {
+        "id": 12,
+        "name": "United States Dollar",
+        "symbol": "USD",
+        "marketCap": 1083292237223.2489
+      },
+      {
+        "id": 13,
+        "name": "United Arab Emirates Dirham",
+        "symbol": "AED",
+        "marketCap": 3979029883622.347
+      },
+      {
+        "id": 14,
+        "name": "Argentine Peso",
+        "symbol": "ARS",
+        "marketCap": 379229922582779.4
+      },
+      {
+        "id": 15,
+        "name": "Australian Dollar",
+        "symbol": "AUD",
+        "marketCap": 1689893641671.02
+      },
+      {
+        "id": 16,
+        "name": "Bangladeshi Taka",
+        "symbol": "BDT",
+        "marketCap": 119202127161156.62
+      },
+      {
+        "id": 17,
+        "name": "Bahraini Dinar",
+        "symbol": "BHD",
+        "marketCap": 408441255245.9417
+      },
+      {
+        "id": 18,
+        "name": "Bermudian Dollar",
+        "symbol": "BMD",
+        "marketCap": 1083292237223.2489
+      },
+      {
+        "id": 19,
+        "name": "Brazilian Real",
+        "symbol": "BRL",
+        "marketCap": 5470734127201.133
+      },
+      {
+        "id": 20,
+        "name": "Canadian Dollar",
+        "symbol": "CAD",
+        "marketCap": 1472234232199.176
+      },
+      {
+        "id": 21,
+        "name": "Swiss Franc",
+        "symbol": "CHF",
+        "marketCap": 975292334341.0405
+      },
+      {
+        "id": 22,
+        "name": "Chilean Peso",
+        "symbol": "CLP",
+        "marketCap": 1003048367879550.6
+      },
+      {
+        "id": 23,
+        "name": "Chinese Yuan",
+        "symbol": "CNY",
+        "marketCap": 7907600014834.847
+      },
+      {
+        "id": 24,
+        "name": "Czech Koruna",
+        "symbol": "CZK",
+        "marketCap": 25061965908159.89
+      },
+      {
+        "id": 25,
+        "name": "Danish Krone",
+        "symbol": "DKK",
+        "marketCap": 7606737261790.803
+      },
+      {
+        "id": 26,
+        "name": "Euro",
+        "symbol": "EUR",
+        "marketCap": 1020195880866.1826
+      },
+      {
+        "id": 27,
+        "name": "British Pound Sterling",
+        "symbol": "GBP",
+        "marketCap": 880824918086.2264
+      },
+      {
+        "id": 28,
+        "name": "Hong Kong Dollar",
+        "symbol": "HKD",
+        "marketCap": 8472239011181.519
+      },
+      {
+        "id": 29,
+        "name": "Hungarian Forint",
+        "symbol": "HUF",
+        "marketCap": 393749296021328.06
+      },
+      {
+        "id": 30,
+        "name": "Indonesian Rupiah",
+        "symbol": "IDR",
+        "marketCap": 16996838237676356
+      },
+      {
+        "id": 31,
+        "name": "Israeli New Shekel",
+        "symbol": "ILS",
+        "marketCap": 4289862175125.536
+      },
+      {
+        "id": 32,
+        "name": "Indian Rupee",
+        "symbol": "INR",
+        "marketCap": 90166197927167.95
+      },
+      {
+        "id": 33,
+        "name": "Japanese Yen",
+        "symbol": "JPY",
+        "marketCap": 161559134935080.88
+      },
+      {
+        "id": 34,
+        "name": "South Korean Won",
+        "symbol": "KRW",
+        "marketCap": 1449107037059618.5
+      },
+      {
+        "id": 35,
+        "name": "Kuwaiti Dinar",
+        "symbol": "KWD",
+        "marketCap": 334825047973.19934
+      },
+      {
+        "id": 36,
+        "name": "Sri Lankan Rupee",
+        "symbol": "LKR",
+        "marketCap": 350852012135986.1
+      }
+    ]
+}
+  
