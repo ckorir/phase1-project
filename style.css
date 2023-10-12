@@ -179,7 +179,7 @@ img[alt="Crypto-Coin"]{
 .crypto-cards{
     width: 100%;
 }
-.crypto-cards p, .crypto-cards th, .watchlist p, .watchlist th, .searchlist p{
+.crypto-cards p, .crypto-cards th, .watchlist p, .watchlist th, .searchlist td{
     padding: 15px;
 }
 
