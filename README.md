@@ -1,5 +1,5 @@
 # Crypyo Watch
-## _Watch Your Favorite Crypto Coins With Ease_
+## _Watch Your Favorite Currencies With Ease_
 
 Currency Watch is a website that showcases the market cap of currencies along with their symbols, providing users with valuable insights into the world of digital assets.
 The website utilises data that has been retreived from coingeko api. A local server has been used as a database for the website.
