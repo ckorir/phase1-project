@@ -1,7 +1,8 @@
 # Crypyo Watch
 ## _Watch Your Favorite Crypto Coins With Ease_
 
-Crypto Watch is a website that showcases the market cap of cryptocurrencies along with their symbols, providing users with valuable insights into the world of digital assets.
+Currency Watch is a website that showcases the market cap of currencies along with their symbols, providing users with valuable insights into the world of digital assets.
+The website utilises data that has been retreived from coingeko api. A local server has been used as a database for the website.
 
 ## Features
 
@@ -9,6 +10,7 @@ Crypto Watch is a website that showcases the market cap of cryptocurrencies alon
 - Add currencies to your watchlist to keep track of your favorite cryptocurrencies.
 - Remove currencies from your watchlist when you no longer wish to monitor them.
 - Search for a currency to access real-time data.
+- Add a currency and its market cap to the currencies list.
 
 ## Tech
 
@@ -17,20 +19,22 @@ Crypto Watch uses the following to function:
 - HTML
 - CSS
 - Vanilla Javascript
-- Coingecko API
+- Json Server
+
+## How to run the code
+To run the server:
+```sh
+--watch db.json
+```
 
 ## Bugs
-
-- The API has a request rate limit of only 30 requests per minute, which can lead to timeouts and slow response times.
-- The search results return the market cap while the displayed currencies on load return the total market cap due to a difference in the API endpoints.
-
-These limitations are a result of the free API package, which restricts available endpoints and enforces a low request rate limit. Upgrading to a more comprehensive package is the recommended solution to enhance Crypto Watch's functionality and user experience.
+- When a currency is searched and added to the watchlist some paddding is added to the currencies list.
+- The website refreshes when data has been deleted or posted to the server causing the watchlist to always refresh when a currency has been removed from the server.
 
 ## Screenshots
 ![](img/SC1.png)
 ![](img/SC2.png)
 ![](img/SC3.png)
-
 
 ## License
 
