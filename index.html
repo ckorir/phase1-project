@@ -31,16 +31,20 @@
             <!-- End of Landing Section-->
 
             <!-- Crypto List Section-->
+            <form id='add-currency-form'>
+                <input id='symbol' type='text' name='symbol' required placeholder="Enter Symbol">
+                <input id='name' type='text' name='name' required placeholder="Enter Name">
+                <input id='marketCap' type='number' name='marketCap' required placeholder="Enter Market Cap">
+                <input type='submit' name='submit' value='Add Currency'>
+            </form>
             <div class="search-section">
                 <form id='search-bar'>
                     <input id='search' type='text' name='search' placeholder="Enter Currency Name">
                     <input type='submit' name='submit'/>
                 </form>
             </div>
-            <div class="search-results">
+            <div class="search-results"></div>
                 
-            </div>
-
             <table class="crypto-container">
 
             </table>

@@ -86,7 +86,7 @@ img[alt="Crypto-Coin"]{
 }
 
 /***** Search Bar Styling *****/
-#search-bar{
+#search-bar, #add-currency-form{
     padding: 0em 2em;
 }
 #search-bar input[type=text]{
@@ -97,10 +97,18 @@ img[alt="Crypto-Coin"]{
     background-color: var(--secondary-color);
     color: var(--font-primary);
 }
-#search-bar input[type=text]:focus{
+#add-currency-form input[type=text], input[type=number]{
+    width: 20em;
+    padding: .8em 3em;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    color: var(--font-primary);
+}
+input[type=text]:focus{
     outline: none;
 }
-#search-bar input[type=submit]{
+input[type=submit]{
     height: 2.5em;
     margin: 6px;
     width: 120px;
@@ -121,7 +129,7 @@ img[alt="Crypto-Coin"]{
     background: linear-gradient(145deg, rgb(104, 92, 206), rgb(81, 20, 179));    
     animation: pulse 1s infinite;
 }
-#search-bar input[type=submit]:hover {
+input[type=submit]:hover {
     -webkit-box-shadow: 1px 1px 13px rgb(133, 131, 131),
                       -1px -1px 33px #545b78;
     box-shadow: 1px 1px 13px rgb(57, 54, 92),
@@ -130,7 +138,7 @@ img[alt="Crypto-Coin"]{
     -webkit-transition: 500ms;
     transition: 500ms;
   }
-#search-bar input[type=submit]:active {
+input[type=submit]:active{
     -webkit-box-shadow: 1px 1px 13px #20232e,
                        -1px -1px 33px #545b78;
     box-shadow: 1px 1px 13px #20232e,

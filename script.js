@@ -9,10 +9,44 @@ document.addEventListener('DOMContentLoaded', function () {
     const watchAction = document.querySelector('.watch-action');
     const form = document.querySelector('form');
     const searchResults = document.querySelector('.search-results');
+    const addForm = document.querySelector('#add-currency-form');
 
     const baseUrl = 'http://localhost:3000';
     const endpoint = '/total_market_cap';
     const url = baseUrl + endpoint;
+
+    addForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the form from submitting and refreshing the page
+
+        // Get input values from the form
+        const symbol = document.getElementById('symbol').value;
+        const name = document.getElementById('name').value;
+        const marketCap = parseFloat(document.getElementById('marketCap').value);
+
+        // Create a data object to send in the POST request
+        const currencyData = {
+            symbol: symbol,
+            name: name,
+            marketCap: marketCap
+        };
+
+        // Send a POST request to add the currency
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(currencyData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response as needed
+            console.log('Currency added successfully:', data);
+        })
+        .catch(error => {
+            console.error('Error adding currency:', error);
+        });
+    });
 
     // Function to fetch data from the server
     function fetchCurrencyDetails() {
