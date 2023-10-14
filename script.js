@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const watchName = document.querySelector('.watch-name');
     const watchRate = document.querySelector('.watch-rate');
     const watchAction = document.querySelector('.watch-action');
-    const form = document.querySelector('form');
+    const searchForm = document.querySelector('#search-bar');
     const searchResults = document.querySelector('.search-results');
     const addForm = document.querySelector('#add-currency-form');
 
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Add a eventlistener to the form
-        form.addEventListener('submit', (e) => {
+        searchForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const searchValue = e.target.search.value.toLowerCase();
             // Call the searchCurrency function
@@ -197,4 +197,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
     }
+
 })
